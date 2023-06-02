@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.conteiner {
+    background-color: rgba(13, 105, 203, 0.917);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.conteiner .sub-conteiner {
+    width: 600px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 5px 10px rgb(24, 143, 222);
+
+}
+
+.conteiner .sub-conteiner .content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    flex: auto;
+}
+
+.conteiner .sub-conteiner .content .icon {
+    margin-right: 10px;
+}
+
+.conteiner .sub-conteiner .content .menssage .title {
+    font-weight: bolder;
+}
+
+.conteiner .sub-conteiner .actions {
+    padding: 10px 0;
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.conteiner .sub-conteiner .actions button{
+    border: none;
+    padding: 15px;
+    min-width: 120px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.conteiner .sub-conteiner .actions .download {
+    background-color: #029BE1;
+    color: white;
+}
+
+.conteiner .sub-conteiner .actions .download:hover{
+    background-color: #0280DE;
+}
+
+.conteiner .sub-conteiner .actions .back {
+    background-color: white;
+    border: solid 1px #ccc;
+}
+
+.conteiner .sub-conteiner .actions .back:hover {
+    background-color: #eee;
+}
+
+@media (max-width:640px){
+    .conteiner .sub-conteiner{
+        width: 80%;
+    }
+    .conteiner .sub-conteiner .actions{
+        flex-direction: column;
+    }
+}

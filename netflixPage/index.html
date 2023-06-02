@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Netflix</title>
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="./img/logo.png" alt="logo netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tv Show</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Latest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="search">
+                <button class="btnsearch"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="./img/tms.jpg" alt="personaje" class="bg">
+            <span class="sombraImg"></span>
+            <div class="content">
+                <img src="./img/logoletras.png" alt="letras" class="movietitle">
+                <h4>
+                    <span>2022</span>
+                    <span><i>16+</i></span>
+                    <span>6 Temporadas</span>
+                    <span>Series</span>
+                </h4>
+                <p>
+                    Britain is a mixture of despair and hedonism in 1919 in the aftermath of the Great War. 
+                    Returning soldiers, newly minted revolutions and criminal gangs are fighting for survival in a nation rocked by economic upheaval.
+                    <br> One of the most powerful gangs of the time is the Peaky Blinders, run by 
+                    returning war hero Thomas Shelby and his family.
+                </p>
+                <div class="buttons">
+                    <a href="#">Play</a>
+                    <a href="#">My List</a>
+                </div>
+            </div>
+            <a href="#" class="play" onclick="togglevideo();"><img src="./img/play.png" alt="">Watch Trailer</a>
+        </section>
+        <section class="trailer">
+            <video src="./img/trailer.mp4" controls="true"></video>
+            <img src="./img/close.png" alt="" class="close" onclick="togglevideo();">
+
+        </section>
+    </main>
+    <script>
+        function togglevideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
